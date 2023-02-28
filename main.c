@@ -232,7 +232,7 @@ int main()
     scanf("%d", &length);
 
     printf("the area of rectangle with width %d and length %d is : %d ", width, length, width * length);
-    4
+
 
 
     // Program calc the greads
