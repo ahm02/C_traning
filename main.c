@@ -383,5 +383,107 @@ int main()
     }
     printf("The sum of positive numbers is : %lf and the average is : %lf", sum, sum/3);
 
+
+
+    // the way to ask the user enter the size for array and enter the data for the array, after that print them
+
+    int size;
+    printf("enter the size of the array : ");
+    scanf("%d", &size);
+    int array[size];
+    for(int i = 0 ; i < size ; i++)
+    {
+        printf("enter the data for element number %d : \n", i+1);
+        scanf("%d", &array[i]);
+    }
+    for(int i = 0 ; i < size ; i++)
+    {
+
+        printf("%d \n", array[i]);
+    }
+
+
+    // The way to ask the user about 2D array from enter the rows and columns, after that ask to enter the value for print them
+
+    int row ;
+    printf("enter the rows number of the array : ");
+    scanf("%d", &row);
+
+    int column ;
+    printf("enter the columns number of the array : ");
+    scanf("%d", &column);
+
+    int array[row][column];
+
+    for(int i = 0 ; i < row ; i++)
+    {
+        for(int j = 0 ; j < column ; j++)
+        {
+            printf("enter the data for row number %d  and column number %d : \n", i+1, j+1);
+            scanf("%d", &array[i][j]);
+        }
+    }
+    for(int i = 0 ; i < row ; i++)
+    {
+        for(int j = 0 ; j < column ; j++)
+        {
+            printf("%d ", array[i][j]);
+        }
+        printf("\n");
+    }
+
+    // The way to see the memory address for every variable which called pointers
+
+    int age = 50;
+
+    double salary = 40000.500;
+
+    double GPA = 4.5;
+
+    char grade = 'A+';
+
+    printf("age : %p \n salary : %p \n GPA : %p \n grade : %p ", &age, &salary, &GPA, &grade);
+
+    // the same way of the way above but we will save it into a variable
+
+
+    int age = 50;
+    int *page = &age;
+
+    double salary = 40000.500;
+    double *psalary = &salary;
+
+    double GPA = 4.5;
+    double *pGPA = &GPA;
+
+    char grade = 'A+';
+    char *pgrade = &grade;
+
+    printf("age : %p \n salary : %p \n GPA : %p \n grade : %p ", page, psalary, pGPA, pgrade);
+
+
+
+
+    // The way to create a file and write into them a text
+
+    FILE * fahmed = fopen("student.text", "w");
+
+    fprintf(fahmed, "Ahmed , 4,5 \n Khalid , 4.1")
+
+
+    fclose(fahmed);
+
+    // When you want to read the first line of the file which is above just replace w with r and rewrite with this way
+
+
+    char line[250];
+    FILE * fahmed = fopen("student.text", "w");
+
+    fgets(line, 250, fahmed);
+    printf("%s", line);
+
+
+    fclose(fahmed);
+
     return 0;
 }
